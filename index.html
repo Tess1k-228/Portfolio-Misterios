@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Портфолио — Misterios Block</title>
+<style>
+  :root {
+    --bg: #0f0f13;
+    --card: #1a1a22;
+    --text: #e8e8f0;
+    --muted: #8a8a9a;
+    --accent: #6c5ce7;
+    --accent2: #00cec9;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  header { text-align: center; padding: 2rem 0 3rem; }
+  h1 {
+    font-size: 2.2rem;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+  }
+  .subtitle { color: var(--muted); font-size: 1.1rem; }
+  .card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #2a2a35;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+  .card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent2);
+  }
+  .card p { color: var(--muted); margin-bottom: 0.5rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+  .tag {
+    background: #2a2a3a;
+    color: var(--text);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+  }
+  .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .btn:hover { background: #5a4bd1; }
+  footer { text-align: center; color: var(--muted); padding: 2rem 0; font-size: 0.9rem; }
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .skill { background: #2a2a3a; padding: 0.75rem; border-radius: 10px; text-align: center; }
+  .plans { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #2a2a35; }
+  
+  /* Новые стили для списков и картинок */
+  .steps { color: var(--muted); margin-left: 1.2rem; margin-top: 0.5rem; }
+  .steps li { margin-bottom: 0.5rem; }
+  .status-card { background: linear-gradient(135deg, #1a1a22, #2a2a3a); }
+  .status-card p { color: var(--text); }
+  .status-card strong { color: var(--accent2); }
+  .screenshots { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; }
+  .screenshots img { width: 200px; border-radius: 12px; border: 1px solid #2a2a35; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>Misterios Block</h1>
+    <p class="subtitle">Начинающий разработчик • 13 лет • Ставропольский край</p>
+  </header>
+
+  <div class="card">
+    <h2>🎮 Misterios Block 2026</h2>
+    <p><strong>Как всё началось:</strong> сначала я делал простую антистресс-игру для себя. Потом решил выложить её в Кодик — там послушал советы и идеи по улучшению. В итоге реализовал всё через HTML to APK builder, собрал APK и отправил в RuStore. Приложение одобрили — и я, честно, был очень рад.</p>
+    <p><strong>Что делал:</strong> весь проект — от идеи до публикации: интерфейс, игровые механики, сборка APK, отправка в магазин.</p>
+    <div class="tags">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">HTML to APK</span>
+      <span class="tag">RuStore</span>
+    </div>
+    <div class="plans">
+      <p><strong>Планы:</strong> после 14 лет — оформить самозанятость и попробовать подключить рекламу. Пока — портфолио и новые проекты.</p>
+    </div>
+    <a class="btn" href="https://www.rustore.ru/catalog/app/com.htmltoapk.misteriosblock" target="_blank">Смотреть в RuStore →</a>
+  </div>
+
+  <div class="card">
+    <h2>🛠 Что я умею</h2>
+    <div class="skills">
+      <div class="skill">Сборка ПК</div>
+      <div class="skill">Чистка от пыли</div>
+      <div class="skill">Установка Windows</div>
+      <div class="skill">Настройка телефонов</div>
+      <div class="skill">HTML / CSS / JS</div>
+      <div class="skill">Публикация в RuStore</div>
+    </div>
+  </div>
+
+  <!-- НОВЫЙ БЛОК: Скриншоты -->
+  <div class="card">
+    <h2>📸 Скриншоты</h2>
+    <div class="screenshots">
+      <!-- Замени 'screen1.jpg' и 'screen2.jpg' на реальные названия твоих файлов в папке -->
+      <img src="screen1.jpg" alt="Геймплей">
+      <img src="screen2.jpg" alt="Меню">
+    </div>
+    <p style="font-size: 0.85rem; margin-top: 0.5rem;">
+</p>
+  </div>
+
+  <!-- НОВЫЙ БЛОК: Статус -->
+  <div class="card status-card">
+    <h2>🚀 Статус на сегодня</h2>
+    <p>✅ Проект в RuStore: <strong>Одобрен и опубликован</strong></p>
+    <p>🛠 Сейчас изучаю: <strong>основы JS и сборку ПК</strong></p>
+    <p>📅 Статус самозанятого: <strong>Оформлю в ближайшее время (после 14 лет)</strong></p>
+  </div>
+
+  <div class="card">
+    <h2>📬 Связаться</h2>
+    <p>Email: <strong>evgenyi183381@gmail.com</strong></p>
+  </div>
+
+  <footer>
+    <p>© 2026 Misterios Block. Сделано вручную.</p>
+  </footer>
+
+</div>
+</body>
+</html>
